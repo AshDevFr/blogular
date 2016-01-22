@@ -1,0 +1,10 @@
+web:
+  build: .
+  dockerfile: Dockerfile_dev
+  command: gulp serve
+  volumes:
+   - ./src:/home/workspace/src
+   - ./server:/home/workspace/server
+  ports:
+   - "3000:3000"
+   - "3010:3010"

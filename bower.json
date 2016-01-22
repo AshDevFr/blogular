@@ -1,0 +1,34 @@
+{
+  "name": "blogular",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular-messages": "~1.4.2",
+    "angular-resource": "~1.4.2",
+    "angular-route": "~1.4.2",
+    "bootstrap-sass": "~3.3.5",
+    "moment": "~2.10.6",
+    "angular": "~1.4.2",
+    "font-awesome": "~4.5.0"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
+        "assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
+        "assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
+        "assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
+        "assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "scss/font-awesome.scss",
+        "fonts/*"
+      ]
+    }
+  },
+  "resolutions": {
+    "angular": "~1.4.2"
+  }
+}

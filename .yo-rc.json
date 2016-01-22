@@ -1,0 +1,58 @@
+{
+  "generator-gulp-angular": {
+    "version": "1.0.2",
+    "props": {
+      "angularVersion": "~1.4.2",
+      "angularModules": [
+        {
+          "key": "messages",
+          "module": "ngMessages"
+        }
+      ],
+      "jQuery": {
+        "key": "jqLite"
+      },
+      "resource": {
+        "key": "angular-resource",
+        "module": "ngResource"
+      },
+      "router": {
+        "key": "angular-route",
+        "module": "ngRoute"
+      },
+      "ui": {
+        "key": "bootstrap",
+        "module": null
+      },
+      "bootstrapComponents": {
+        "key": "noBootstrapComponents",
+        "module": null
+      },
+      "cssPreprocessor": {
+        "key": "node-sass",
+        "extension": "scss"
+      },
+      "jsPreprocessor": {
+        "key": "noJsPrepro",
+        "extension": "js",
+        "srcExtension": "js"
+      },
+      "htmlPreprocessor": {
+        "key": "noHtmlPrepro",
+        "extension": "html"
+      },
+      "foundationComponents": {
+        "name": null,
+        "version": null,
+        "key": null,
+        "module": null
+      },
+      "paths": {
+        "src": "src",
+        "dist": "dist",
+        "e2e": "e2e",
+        "tmp": ".tmp"
+      }
+    }
+  }
+}
