@@ -12,7 +12,6 @@ var articles = [
       },
       {
         id: 'YgTD2rF1XSAfR77lKtxrTwuR+azzbzQhUxfiRyg1u0w=_1526913d003:a0c9d5:ab4bea13',
-        recrawled: 1453462927851,
         title: 'Facebook\'s Made 360 Video Files 80 Percent Smaller Using Math',
         published: '2016-01-22T11:13:48.000Z',
         author: 'Jamie Condliffe',
@@ -24,7 +23,6 @@ var articles = [
       },
       {
         id: 'YgTD2rF1XSAfR77lKtxrTwuR+azzbzQhUxfiRyg1u0w=_15268dcd129:9bdc0f:31e992ea',
-        recrawled: 1453462927851,
         title: 'Skype Finally Hides Your IP Address',
         published: '2016-01-22T10:16:05.000Z',
         author: 'Jamie Condliffe',
@@ -36,7 +34,6 @@ var articles = [
       },
       {
         id: 'YgTD2rF1XSAfR77lKtxrTwuR+azzbzQhUxfiRyg1u0w=_15268b0ccb8:7c9da5:ab4bea13',
-        recrawled: 1453462216905,
         title: 'One of the World\'s Leading VR Professors Now Works for Apple',
         published: '2016-01-22T09:27:00.000Z',
         author: 'Jamie Condliffe',
@@ -158,7 +155,6 @@ var articles = [
       },
       {
         id: 'YgTD2rF1XSAfR77lKtxrTwuR+azzbzQhUxfiRyg1u0w=_15266bdf99d:3f76cac:ab4bea13',
-        recrawled: 1453423357143,
         title: 'SpaceX\'s Crew Dragon Rocks Latest Hover Tests',
         published: '2016-01-22T00:20:00.000Z',
         author: 'Mika McKinnon',
@@ -170,7 +166,6 @@ var articles = [
       },
       {
         id: 'YgTD2rF1XSAfR77lKtxrTwuR+azzbzQhUxfiRyg1u0w=_15266a7823c:429168c:f44c6242',
-        recrawled: 1453422672285,
         title: 'How Will a New Clock Keep Good Time Even in Deep Space?',
         published: '2016-01-22T00:00:00.000Z',
         author: 'Mika McKinnon',
@@ -182,7 +177,6 @@ var articles = [
       },
       {
         id: 'YgTD2rF1XSAfR77lKtxrTwuR+azzbzQhUxfiRyg1u0w=_152668b8949:41e44e8:f44c6242',
-        recrawled: 1453420096639,
         title: 'The Future is Just Two Years Away Forever Until You\'re Dead',
         published: '2016-01-21T23:20:00.000Z',
         author: 'Matt Novak on Paleofuture, shared by Cheryl Eddy to Gizmodo',
@@ -237,7 +231,6 @@ var articles = [
       },
       {
         id: 'vSbjObuspiUUUlHx496XW/WaRBw2NaRdTW1NAiwoLAs=_152698b9112:cde00f:ab4bea13',
-        recrawled: 1453471203231,
         title: 'France wants to fix the terrible AZERTY keyboard',
         published: '2016-01-22T13:31:00.000Z',
         author: 'Steve Dent',
@@ -254,7 +247,6 @@ var articles = [
       },
       {
         id: 'vSbjObuspiUUUlHx496XW/WaRBw2NaRdTW1NAiwoLAs=_152694d62e6:b458f0:ab4bea13',
-        recrawled: 1453466000146,
         title: 'Skype hides IP addresses to protect users from online trolls',
         published: '2016-01-22T12:24:00.000Z',
         author: 'Matt Brian',
@@ -303,7 +295,6 @@ var articles = [
       },
       {
         id: 'vSbjObuspiUUUlHx496XW/WaRBw2NaRdTW1NAiwoLAs=_15268982849:74868e:ab4bea13',
-        recrawled: 1453457005081,
         title: 'Amazon UK will take £10 off any order over £50 today',
         published: '2016-01-22T09:05:00.000Z',
         author: 'Nick Summers',
