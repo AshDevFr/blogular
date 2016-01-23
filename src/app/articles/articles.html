@@ -8,9 +8,9 @@
          </a>
          <div class="actionBar text-right">
             <div class="btn-group" role="group">
-               <button class="btn btn-default" title="Edit">
+               <a href="#/articles/edit/{{article.id}}" class="btn btn-default" title="Edit">
                   <i class="fa fa-pencil-square-o"></i>
-               </button>
+               </a>
                <button class="btn btn-default" title="Delete"
                        ng-click="ArticlesCtrl.deleteArticle($index)">
                   <i class="fa fa-trash"></i>

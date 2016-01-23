@@ -5,6 +5,7 @@
     .module('blogularApp', [
       'blogularApp-home',
       'blogularApp-articles',
+      'blogularApp-editArticle',
       'ngRoute'
     ]);
 })();

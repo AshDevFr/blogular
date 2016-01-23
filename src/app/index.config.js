@@ -21,6 +21,12 @@
         controllerAs : 'ArticlesCtrl',
         tabName      : 'articles'
       })
+      .when('/articles/edit/:id', {
+        templateUrl  : 'app/editArticle/editArticle.html',
+        controller   : 'EditArticleController',
+        controllerAs : 'EditArticleCtrl',
+        tabName      : 'edit'
+      })
       .otherwise({
         redirectTo : '/'
       });
