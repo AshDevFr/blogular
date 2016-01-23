@@ -1,5 +1,5 @@
 <div class="col-sm-12 col-md-9">
-   <div class="row article" ng-repeat="article in ArticlesCtrl.articles">
+   <div class="row article" ng-repeat="article in (filteredArticles = (ArticlesCtrl.articles | filter:search)) | filter:categorySearch">
       <div class="col-sm-4">
          <a href="#" class="">
             <img
@@ -38,18 +38,30 @@
    </div>
    <h4>Search</h4>
    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search..." aria-describedby="search-icon">
+      <input type="text" class="form-control" placeholder="Search..."
+             ng-model="search.title"
+             aria-describedby="search-icon">
       <span class="input-group-addon" id="search-icon"><i class="fa fa-search"></i></span>
    </div>
    <div id="demo" class="collapse in">
       <hr>
       <div class="list-group list-group">
          <h4 class="">Category</h4>
-         <a href="#" class="list-group-item"><span class="badge">25</span> All</a>
-         <a href="#" class="list-group-item"><span class="badge">22</span> Technology</a>
-         <a href="#" class="list-group-item"><span class="badge">2</span> Social</a>
-         <a href="#" class="list-group-item"><span class="badge">1</span> Media</a>
-         <a href="#" class="list-group-item"><span class="badge">1</span> News</a>
+         <a class="list-group-item" ng-click="categorySearch.categories = ''">
+            <span class="badge">{{filteredArticles.length}}</span> All
+         </a>
+         <a class="list-group-item" ng-click="categorySearch.categories = 'Technology'">
+            <span class="badge">{{(filteredArticles | filter:{categories:'Technology'}).length }}</span> Technology
+         </a>
+         <a class="list-group-item" ng-click="categorySearch.categories = 'Social'">
+            <span class="badge">{{(filteredArticles | filter:{categories:'Social'}).length }}</span> Social
+         </a>
+         <a class="list-group-item" ng-click="categorySearch.categories = 'Media'">
+            <span class="badge">{{(filteredArticles | filter:{categories:'Media'}).length }}</span> Media
+         </a>
+         <a class="list-group-item" ng-click="categorySearch.categories = 'News'">
+            <span class="badge">{{(filteredArticles | filter:{categories:'News'}).length }}</span> News
+         </a>
       </div>
    </div>
    <hr>
