@@ -23,7 +23,7 @@
    <div ng-switch on="display">
       <div ng-switch-default>
          <div class="row article"
-              ng-repeat="article in (filteredArticles = (ArticlesCtrl.articles | filter:search)) | filter:categorySearch | orderBy:order:reverse">
+              ng-repeat="article in (ArticlesCtrl.filteredArticles = (ArticlesCtrl.articles | filter:search)) | filter:categorySearch | orderBy:order:reverse">
             <div class="col-sm-4">
                <a href="#" class="">
                   <img
@@ -64,7 +64,7 @@
          </tr>
          </thead>
          <tbody>
-         <tr ng-repeat="article in (filteredArticles = (ArticlesCtrl.articles | filter:search)) | filter:categorySearch | orderBy:order:reverse">
+         <tr ng-repeat="article in (ArticlesCtrl.filteredArticles = (ArticlesCtrl.articles | filter:search)) | filter:categorySearch | orderBy:order:reverse">
             <td>{{$index + 1}}</td>
             <td>{{article.title | uppercase}}</td>
             <td>{{article.content}}</td>
@@ -94,19 +94,19 @@
       <div class="list-group list-group">
          <h4 class="">Category</h4>
          <a ng-class="{active: !categorySearch.categories}" class="list-group-item" ng-click="categorySearch.categories = ''">
-            <span class="badge">{{filteredArticles.length}}</span> All
+            <span class="badge">{{ArticlesCtrl.filteredArticles.length}}</span> All
          </a>
          <a ng-class="{active: categorySearch.categories === 'Technology'}" class="list-group-item" ng-click="categorySearch.categories = 'Technology'">
-            <span class="badge">{{(filteredArticles | filter:{categories:'Technology'}).length }}</span> Technology
+            <span class="badge">{{(ArticlesCtrl.filteredArticles | filter:{categories:'Technology'}).length }}</span> Technology
          </a>
          <a ng-class="{active: categorySearch.categories === 'Social'}" class="list-group-item" ng-click="categorySearch.categories = 'Social'">
-            <span class="badge">{{(filteredArticles | filter:{categories:'Social'}).length }}</span> Social
+            <span class="badge">{{(ArticlesCtrl.filteredArticles | filter:{categories:'Social'}).length }}</span> Social
          </a>
          <a ng-class="{active: categorySearch.categories === 'Media'}" class="list-group-item" ng-click="categorySearch.categories = 'Media'">
-            <span class="badge">{{(filteredArticles | filter:{categories:'Media'}).length }}</span> Media
+            <span class="badge">{{(ArticlesCtrl.filteredArticles | filter:{categories:'Media'}).length }}</span> Media
          </a>
          <a ng-class="{active: categorySearch.categories === 'News'}" class="list-group-item" ng-click="categorySearch.categories = 'News'">
-            <span class="badge">{{(filteredArticles | filter:{categories:'News'}).length }}</span> News
+            <span class="badge">{{(ArticlesCtrl.filteredArticles | filter:{categories:'News'}).length }}</span> News
          </a>
       </div>
    </div>
