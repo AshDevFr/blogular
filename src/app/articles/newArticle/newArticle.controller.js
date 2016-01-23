@@ -8,18 +8,21 @@
   NewArticleController.$inject = ['$scope'];
 
   function NewArticleController($scope) {
-    $scope.newArticle = {};
+    var vm = this;
 
-    $scope.addArticle = addArticle;
+    vm.newArticle = {};
+
+    vm.addArticle = addArticle;
 
     function addArticle() {
       var date = new Date();
-      $scope.newArticle.published = date;
 
-      console.log($scope.newArticle);
+      vm.newArticle.published = date;
 
-      $scope.articles.push($scope.newArticle);
-      $scope.newArticle = {};
+      console.log(vm.newArticle);
+
+      $scope.ArticlesCtrl.articles.push(vm.newArticle);
+      vm.newArticle = {};
     }
   }
 })();

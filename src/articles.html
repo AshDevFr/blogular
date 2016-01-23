@@ -377,9 +377,9 @@
 </nav>
 
 <div class="container main">
-   <div ng-controller="ArticlesController">
+   <div ng-controller="ArticlesController as ArticlesCtrl">
       <div class="col-sm-12 col-md-9">
-         <div class="row article" ng-repeat="article in articles">
+         <div class="row article" ng-repeat="article in ArticlesCtrl.articles">
             <div class="col-sm-4">
                <a href="#" class="">
                   <img
@@ -409,7 +409,7 @@
          <hr>
       </div>
 
-      <ng-include src="'app/articles/newArticle/newArticle.html'" ng-controller="NewArticleController"></ng-include>
+      <ng-include src="'app/articles/newArticle/newArticle.html'" ng-controller="NewArticleController as NewArticleCtrl"></ng-include>
 
    </div>
 </div>

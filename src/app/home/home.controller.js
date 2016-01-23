@@ -5,9 +5,11 @@
     .module('blogularApp-home')
     .controller('HomeController', HomeController);
 
-  HomeController.$inject = ['$scope'];
+  HomeController.$inject = [];
 
-  function HomeController($scope) {
-    $scope.name = 'World';
+  function HomeController() {
+    var vm = this;
+
+    vm.name = 'World';
   }
 })();

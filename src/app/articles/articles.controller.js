@@ -5,10 +5,12 @@
     .module('blogularApp-articles')
     .controller('ArticlesController', ArticlesController);
 
-  ArticlesController.$inject = ['$scope'];
+  ArticlesController.$inject = [];
 
-  function ArticlesController($scope) {
-    $scope.articles = [
+  function ArticlesController() {
+    var vm = this;
+
+    vm.articles = [
       {
         id         : 'YgTD2rF1XSAfR77lKtxrTwuR+azzbzQhUxfiRyg1u0w=_15268dcd129:9bdc0f:31e992ea',
         title      : 'Skype Finally Hides Your IP Address',
