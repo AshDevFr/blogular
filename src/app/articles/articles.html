@@ -47,19 +47,19 @@
       <hr>
       <div class="list-group list-group">
          <h4 class="">Category</h4>
-         <a class="list-group-item" ng-click="categorySearch.categories = ''">
+         <a ng-class="{active: !categorySearch.categories}" class="list-group-item" ng-click="categorySearch.categories = ''">
             <span class="badge">{{filteredArticles.length}}</span> All
          </a>
-         <a class="list-group-item" ng-click="categorySearch.categories = 'Technology'">
+         <a ng-class="{active: categorySearch.categories === 'Technology'}" class="list-group-item" ng-click="categorySearch.categories = 'Technology'">
             <span class="badge">{{(filteredArticles | filter:{categories:'Technology'}).length }}</span> Technology
          </a>
-         <a class="list-group-item" ng-click="categorySearch.categories = 'Social'">
+         <a ng-class="{active: categorySearch.categories === 'Social'}" class="list-group-item" ng-click="categorySearch.categories = 'Social'">
             <span class="badge">{{(filteredArticles | filter:{categories:'Social'}).length }}</span> Social
          </a>
-         <a class="list-group-item" ng-click="categorySearch.categories = 'Media'">
+         <a ng-class="{active: categorySearch.categories === 'Media'}" class="list-group-item" ng-click="categorySearch.categories = 'Media'">
             <span class="badge">{{(filteredArticles | filter:{categories:'Media'}).length }}</span> Media
          </a>
-         <a class="list-group-item" ng-click="categorySearch.categories = 'News'">
+         <a ng-class="{active: categorySearch.categories === 'News'}" class="list-group-item" ng-click="categorySearch.categories = 'News'">
             <span class="badge">{{(filteredArticles | filter:{categories:'News'}).length }}</span> News
          </a>
       </div>
