@@ -5,9 +5,9 @@
     .module('blogularApp-articles-newArticle')
     .controller('NewArticleController', NewArticleController);
 
-  NewArticleController.$inject = ['$scope'];
+  NewArticleController.$inject = ['$rootScope'];
 
-  function NewArticleController($scope) {
+  function NewArticleController($rootScope) {
     var vm = this;
 
     vm.newArticle = {};
@@ -18,10 +18,8 @@
       var date = new Date();
 
       vm.newArticle.published = date;
-
-      console.log(vm.newArticle);
-
-      $scope.ArticlesCtrl.articles.push(vm.newArticle);
+      console.log('Emit event: newArticle');
+      $rootScope.$emit('newArticle', vm.newArticle);
       vm.newArticle = {};
     }
   }

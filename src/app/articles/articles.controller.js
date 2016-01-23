@@ -5,9 +5,9 @@
     .module('blogularApp-articles')
     .controller('ArticlesController', ArticlesController);
 
-  ArticlesController.$inject = [];
+  ArticlesController.$inject = ['$rootScope'];
 
-  function ArticlesController() {
+  function ArticlesController($rootScope) {
     var vm = this;
 
     vm.articles = [
@@ -89,5 +89,10 @@
         content    : 'This ain’t no regular car model car because this speed model car can hit speeds of up to 204mph on the track. Watch it build up to that speed and just zip around and around until it starts smoking and becomes a total whir.SPLOID is delicious brain candy. Follow us on Facebook, Twitter and YouTube....'
       }
     ];
+
+    $rootScope.$on('newArticle', function(event, article) {
+      console.log('Event received: newArticle', article);
+      vm.articles.push(article);
+    })
   }
 })();
