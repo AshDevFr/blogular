@@ -6,6 +6,9 @@
                   ng-src="{{article.pictureUrl}}"
                   class="img-responsive">
          </a>
+         <div class="actionBar text-right">
+            <button class="btn btn-default" title="Delete"><i class="fa fa-trash"></i></button>
+         </div>
       </div>
       <div class="col-sm-8">
          <h3 class="title">{{article.title}}</h3>
@@ -15,7 +18,6 @@
             <span ng-show="article.author">Presented by <a href="#">{{article.author}}</a></span><br>
             Date <a href="#">{{article.published}}</a>
          </p>
-
       </div>
    </div>
 </div>
