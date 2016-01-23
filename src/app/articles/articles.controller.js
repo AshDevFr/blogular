@@ -33,10 +33,16 @@
       });
     }
 
-    function deleteArticle(index) {
-      Articles.remove(vm.articles[index]).then(function() {
-        vm.articles.splice(index, 1);
-      });
+    function deleteArticle(article) {
+      var index;
+      index = vm.articles.indexOf(article);
+      if (index > -1) {
+        Articles.remove(vm.articles[index]).then(function() {
+          vm.articles.splice(index, 1);
+        });
+      }else {
+        console.error('Article not found')
+      }
     }
   }
 })();
