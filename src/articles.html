@@ -391,8 +391,10 @@
                <h3 class="title">{{article.title}}</h3>
                <p>{{article.content}}</p>
 
-               <p class="text-muted">Presented by <a href="#">{{article.author}}</a><br>
-                  Date <a href="#">{{article.published}}</a></p>
+               <p class="text-muted">
+                  <span ng-show="article.author">Presented by <a href="#">{{article.author}}</a></span><br>
+                  Date <a href="#">{{article.published}}</a>
+               </p>
 
             </div>
          </div>
