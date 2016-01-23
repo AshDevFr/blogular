@@ -7,12 +7,14 @@
     "angular-route": "~1.4.2",
     "bootstrap-sass": "~3.3.5",
     "moment": "~2.10.6",
+    "animate.css": "~3.4.0",
     "angular": "~1.4.2",
     "font-awesome": "~4.5.0"
   },
   "overrides": {
     "bootstrap-sass": {
       "main": [
+        "assets/javascripts/bootstrap.js",
         "assets/stylesheets/_bootstrap.scss",
         "assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
         "assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
