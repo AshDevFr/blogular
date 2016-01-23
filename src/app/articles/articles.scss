@@ -1,0 +1,14 @@
+.article {
+  &:after {
+    content:"";
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0));
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+  }
+  .img-responsive {
+    margin-top: 25px;
+  }
+}
