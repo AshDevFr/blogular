@@ -11,7 +11,6 @@
     $scope.articles = [
       {
         id         : 'YgTD2rF1XSAfR77lKtxrTwuR+azzbzQhUxfiRyg1u0w=_15268dcd129:9bdc0f:31e992ea',
-        recrawled  : 1453462927851,
         title      : 'Skype Finally Hides Your IP Address',
         published  : '2016-01-22T10:16:05.000Z',
         author     : 'Jamie Condliffe',
@@ -23,7 +22,6 @@
       },
       {
         id         : 'YgTD2rF1XSAfR77lKtxrTwuR+azzbzQhUxfiRyg1u0w=_15268b0ccb8:7c9da5:ab4bea13',
-        recrawled  : 1453462216905,
         title      : 'One of the World\'s Leading VR Professors Now Works for Apple',
         published  : '2016-01-22T09:27:00.000Z',
         author     : 'Jamie Condliffe',
