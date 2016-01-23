@@ -5,9 +5,9 @@
     .module('blogularApp-editArticle')
     .controller('EditArticleController', EditArticleController);
 
-  EditArticleController.$inject = ['$http', '$routeParams', '$location'];
+  EditArticleController.$inject = ['Articles', '$routeParams', '$location'];
 
-  function EditArticleController($http, $routeParams, $location) {
+  function EditArticleController(Articles, $routeParams, $location) {
     var vm = this;
 
     vm.article = {};
@@ -17,7 +17,7 @@
     activate();
 
     function activate() {
-      $http.get('/api/articles/' + $routeParams.id).then(function(response) {
+      Articles.fetchOne($routeParams.id).then(function(response) {
         vm.article = response.data;
       }, function(err) {
         console.log('Something wrong happened', err);
@@ -25,7 +25,7 @@
     }
 
     function updateArticle() {
-      $http.put('/api/articles/' + $routeParams.id, vm.article).then(function() {
+      Articles.update(vm.article).then(function() {
         $location.path('/articles');
       }, function(err) {
         console.log('Something wrong happened', err);

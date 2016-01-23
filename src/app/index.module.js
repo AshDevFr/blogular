@@ -3,6 +3,7 @@
 
   angular
     .module('blogularApp', [
+      'blogularApp-components',
       'blogularApp-home',
       'blogularApp-articles',
       'blogularApp-editArticle',
