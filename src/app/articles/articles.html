@@ -21,35 +21,36 @@
    </div>
    <hr>
    <div ng-switch on="display">
-      <div class="row article"
-           ng-switch-default
-           ng-repeat="article in (filteredArticles = (ArticlesCtrl.articles | filter:search)) | filter:categorySearch | orderBy:order:reverse">
-         <div class="col-sm-4">
-            <a href="#" class="">
-               <img
-                     ng-src="{{article.pictureUrl | picture}}"
-                     class="img-responsive">
-            </a>
-            <div class="actionBar text-right">
-               <div class="btn-group" role="group">
-                  <a href="#/articles/edit/{{article.id}}" class="btn btn-default" title="Edit">
-                     <i class="fa fa-pencil-square-o"></i>
-                  </a>
-                  <button class="btn btn-default" title="Delete"
-                          ng-click="ArticlesCtrl.deleteArticle(article)">
-                     <i class="fa fa-trash"></i>
-                  </button>
+      <div ng-switch-default>
+         <div class="row article"
+              ng-repeat="article in (filteredArticles = (ArticlesCtrl.articles | filter:search)) | filter:categorySearch | orderBy:order:reverse">
+            <div class="col-sm-4">
+               <a href="#" class="">
+                  <img
+                        ng-src="{{article.pictureUrl | picture}}"
+                        class="img-responsive">
+               </a>
+               <div class="actionBar text-right">
+                  <div class="btn-group" role="group">
+                     <a href="#/articles/edit/{{article.id}}" class="btn btn-default" title="Edit">
+                        <i class="fa fa-pencil-square-o"></i>
+                     </a>
+                     <button class="btn btn-default" title="Delete"
+                             ng-click="ArticlesCtrl.deleteArticle(article)">
+                        <i class="fa fa-trash"></i>
+                     </button>
+                  </div>
                </div>
             </div>
-         </div>
-         <div class="col-sm-8">
-            <h3 class="title">{{article.title | uppercase}}</h3>
-            <p>{{article.content}}</p>
+            <div class="col-sm-8">
+               <h3 class="title">{{article.title | uppercase}}</h3>
+               <p>{{article.content}}</p>
 
-            <p class="text-muted">
-               <span ng-show="article.author">Presented by <a href="#">{{article.author}}</a></span><br>
-               Date <a href="#">{{article.published | date}}</a>
-            </p>
+               <p class="text-muted">
+                  <span ng-show="article.author">Presented by <a href="#">{{article.author}}</a></span><br>
+                  Date <a href="#">{{article.published | date}}</a>
+               </p>
+            </div>
          </div>
       </div>
       <table class="table table-striped" ng-switch-when="table">
