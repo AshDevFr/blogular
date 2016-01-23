@@ -2,14 +2,18 @@
    <div class="well hidden-xs">
       <div class="row">
          <div class="col-xs-12">
-            <button class="btn btn-defaut">Sort by title</button>
-            <button class="btn btn-defaut">Sort by date</button>
+            <button class="btn" ng-class="{'btn-primary': order === 'title', 'btn-defaut': order !== 'title'}" ng-click="reverse = order!=='title'?false:!reverse; order='title'">
+               Sort by title &nbsp; <i class="fa" ng-class="{'fa-sort-asc': order === 'title' && !reverse, 'fa-sort-desc': order === 'title' && reverse}"></i>
+            </button>
+            <button class="btn" ng-class="{'btn-primary': order === 'published', 'btn-defaut': order !== 'published'}" ng-click="reverse = order!=='published'?false:!reverse; order='published'">
+               Sort by date &nbsp; <i class="fa" ng-class="{'fa-sort-asc': order === 'published' && !reverse, 'fa-sort-desc': order === 'published' && reverse}"></i>
+            </button>
          </div>
       </div>
    </div>
    <hr>
 
-   <div class="row article" ng-repeat="article in (filteredArticles = (ArticlesCtrl.articles | filter:search)) | filter:categorySearch">
+   <div class="row article" ng-repeat="article in (filteredArticles = (ArticlesCtrl.articles | filter:search)) | filter:categorySearch | orderBy:order:reverse">
       <div class="col-sm-4">
          <a href="#" class="">
             <img
