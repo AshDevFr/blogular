@@ -1,4 +1,14 @@
 <div class="col-sm-12 col-md-9">
+   <div class="well hidden-xs">
+      <div class="row">
+         <div class="col-xs-12">
+            <button class="btn btn-defaut">Sort by title</button>
+            <button class="btn btn-defaut">Sort by date</button>
+         </div>
+      </div>
+   </div>
+   <hr>
+
    <div class="row article" ng-repeat="article in (filteredArticles = (ArticlesCtrl.articles | filter:search)) | filter:categorySearch">
       <div class="col-sm-4">
          <a href="#" class="">
