@@ -1,6 +1,6 @@
 .article {
   &:after {
-    content:"";
+    content: "";
     background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0));
     position: relative;
     bottom: 0;
