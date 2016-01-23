@@ -369,20 +369,15 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
          <ul class="nav navbar-nav">
-            <li class="active"><a href="/index.html">Home</a></li>
-            <li><a href="/articles.html">Articles</a></li>
+            <li ng-class="{active: activeTab === 'home'}"><a href="#/">Home</a></li>
+            <li ng-class="{active: activeTab === 'articles'}"><a href="#/articles">Articles</a></li>
          </ul>
       </div>
    </div>
 </nav>
 
 <div class="container main">
-   <div class="jumbotron" ng-controller="HomeController as HomeCtrl">
-      <h1>Hello {{HomeCtrl.name}}!</h1>
-      <p>Welcome on Blogular, a simple set of exercises to learn how to develop a web application using
-         <img src="assets/images/angular.png" width="200px" alt="AngularJS">
-      </p>
-   </div>
+   <div ng-view></div>
 </div>
 
 <!-- build:js(src) scripts/vendor.js -->

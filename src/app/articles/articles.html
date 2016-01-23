@@ -1,0 +1,32 @@
+<div class="col-sm-12 col-md-9">
+   <div class="row article" ng-repeat="article in ArticlesCtrl.articles">
+      <div class="col-sm-4">
+         <a href="#" class="">
+            <img
+                  ng-src="{{article.pictureUrl}}"
+                  class="img-responsive">
+         </a>
+      </div>
+      <div class="col-sm-8">
+         <h3 class="title">{{article.title}}</h3>
+         <p>{{article.content}}</p>
+
+         <p class="text-muted">
+            <span ng-show="article.author">Presented by <a href="#">{{article.author}}</a></span><br>
+            Date <a href="#">{{article.published}}</a>
+         </p>
+
+      </div>
+   </div>
+</div>
+
+<div class="col-md-3 hidden-xs hidden-sm sidebar">
+   <div class="new-article text-center">
+      <a class="btn btn-primary" data-toggle="modal" data-target="#newArticleModal">
+         Add new article
+      </a>
+   </div>
+   <hr>
+</div>
+
+<ng-include src="'app/articles/newArticle/newArticle.html'" ng-controller="NewArticleController as NewArticleCtrl"></ng-include>
