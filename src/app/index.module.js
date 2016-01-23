@@ -2,5 +2,5 @@
   'use strict';
 
   angular
-    .module('blogularApp', []);
+    .module('blogularApp', ['blogularApp-home']);
 })();
