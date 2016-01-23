@@ -378,7 +378,7 @@
 
 <div class="container main">
    <div ng-controller="ArticlesController">
-      <div class="col-sm-12">
+      <div class="col-sm-12 col-md-9">
          <div class="row article" ng-repeat="article in articles">
             <div class="col-sm-4">
                <a href="#" class="">
@@ -397,6 +397,49 @@
             </div>
          </div>
       </div>
+
+      <div class="col-md-3 hidden-xs hidden-sm sidebar">
+         <div class="new-article text-center">
+            <a class="btn btn-primary" data-toggle="modal" data-target="#newArticleModal">
+               Add new article
+            </a>
+         </div>
+         <hr>
+         <h4>Search</h4>
+         <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search..." aria-describedby="search-icon">
+            <span class="input-group-addon" id="search-icon"><i class="fa fa-search"></i></span>
+         </div>
+         <div id="demo" class="collapse in">
+            <hr>
+            <div class="list-group list-group">
+               <h4 class="">Category</h4>
+               <a href="#" class="list-group-item"><span class="badge">25</span> All</a>
+               <a href="#" class="list-group-item"><span class="badge">22</span> Technology</a>
+               <a href="#" class="list-group-item"><span class="badge">2</span> Social</a>
+               <a href="#" class="list-group-item"><span class="badge">1</span> Media</a>
+            </div>
+         </div>
+      </div>
+
+      <div class="modal fade" id="newArticleModal" tabindex="-1" role="dialog" aria-labelledby="newArticleModalLabel">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="newArticleModalLabel">Create a new article</h4>
+               </div>
+               <div class="modal-body">
+
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save</button>
+               </div>
+            </div>
+         </div>
+      </div>
+
    </div>
 </div>
 
