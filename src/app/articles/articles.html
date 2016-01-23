@@ -8,6 +8,11 @@
             <button class="btn" ng-class="{'btn-primary': order === 'published', 'btn-defaut': order !== 'published'}" ng-click="reverse = order!=='published'?false:!reverse; order='published'">
                Sort by date &nbsp; <i class="fa" ng-class="{'fa-sort-asc': order === 'published' && !reverse, 'fa-sort-desc': order === 'published' && reverse}"></i>
             </button>
+            <div class="btn-group pull-right">
+               <button type="button" class="btn btn-default"><span class="fa fa-table"></span></button>
+               <button type="button" class="btn btn-default active"><span class="fa fa-th-list"></span>
+               </button>
+            </div>
          </div>
       </div>
    </div>
