@@ -9,43 +9,69 @@
                Sort by date &nbsp; <i class="fa" ng-class="{'fa-sort-asc': order === 'published' && !reverse, 'fa-sort-desc': order === 'published' && reverse}"></i>
             </button>
             <div class="btn-group pull-right">
-               <button type="button" class="btn btn-default"><span class="fa fa-table"></span></button>
-               <button type="button" class="btn btn-default active"><span class="fa fa-th-list"></span>
+               <button type="button" class="btn btn-default" ng-click="display='table'" ng-class="{active: display === 'table'}">
+                  <span class="fa fa-table"></span>
+               </button>
+               <button type="button" class="btn btn-default" ng-click="display='list'" ng-class="{active: display === 'list' || !display}">
+                  <span class="fa fa-th-list"></span>
                </button>
             </div>
          </div>
       </div>
    </div>
    <hr>
-
-   <div class="row article" ng-repeat="article in (filteredArticles = (ArticlesCtrl.articles | filter:search)) | filter:categorySearch | orderBy:order:reverse">
-      <div class="col-sm-4">
-         <a href="#" class="">
-            <img
-                  ng-src="{{article.pictureUrl | picture}}"
-                  class="img-responsive">
-         </a>
-         <div class="actionBar text-right">
-            <div class="btn-group" role="group">
-               <a href="#/articles/edit/{{article.id}}" class="btn btn-default" title="Edit">
-                  <i class="fa fa-pencil-square-o"></i>
-               </a>
-               <button class="btn btn-default" title="Delete"
-                       ng-click="ArticlesCtrl.deleteArticle(article)">
-                  <i class="fa fa-trash"></i>
-               </button>
+   <div ng-switch on="display">
+      <div class="row article"
+           ng-switch-default
+           ng-repeat="article in (filteredArticles = (ArticlesCtrl.articles | filter:search)) | filter:categorySearch | orderBy:order:reverse">
+         <div class="col-sm-4">
+            <a href="#" class="">
+               <img
+                     ng-src="{{article.pictureUrl | picture}}"
+                     class="img-responsive">
+            </a>
+            <div class="actionBar text-right">
+               <div class="btn-group" role="group">
+                  <a href="#/articles/edit/{{article.id}}" class="btn btn-default" title="Edit">
+                     <i class="fa fa-pencil-square-o"></i>
+                  </a>
+                  <button class="btn btn-default" title="Delete"
+                          ng-click="ArticlesCtrl.deleteArticle(article)">
+                     <i class="fa fa-trash"></i>
+                  </button>
+               </div>
             </div>
          </div>
-      </div>
-      <div class="col-sm-8">
-         <h3 class="title">{{article.title | uppercase}}</h3>
-         <p>{{article.content}}</p>
+         <div class="col-sm-8">
+            <h3 class="title">{{article.title | uppercase}}</h3>
+            <p>{{article.content}}</p>
 
-         <p class="text-muted">
-            <span ng-show="article.author">Presented by <a href="#">{{article.author}}</a></span><br>
-            Date <a href="#">{{article.published | date}}</a>
-         </p>
+            <p class="text-muted">
+               <span ng-show="article.author">Presented by <a href="#">{{article.author}}</a></span><br>
+               Date <a href="#">{{article.published | date}}</a>
+            </p>
+         </div>
       </div>
+      <table class="table table-striped" ng-switch-when="table">
+         <thead>
+         <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Author</th>
+            <th>Date</th>
+         </tr>
+         </thead>
+         <tbody>
+         <tr ng-repeat="article in (filteredArticles = (ArticlesCtrl.articles | filter:search)) | filter:categorySearch | orderBy:order:reverse">
+            <td>{{$index + 1}}</td>
+            <td>{{article.title | uppercase}}</td>
+            <td>{{article.content}}</td>
+            <td>{{article.author}}</td>
+            <td>{{article.published | date}}</td>
+         </tr>
+         </tbody>
+      </table>
    </div>
 </div>
 
