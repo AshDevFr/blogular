@@ -10,9 +10,6 @@ ADD .eslintrc ${workdir_path}
 ADD .bowerrc ${workdir_path}
 ADD package.json ${workdir_path}
 ADD bower.json ${workdir_path}
-ADD gulpfile.js ${workdir_path}
-ADD gulp ${workdir_path}/gulp
-ADD README.md ${workdir_path}
 
 RUN npm install
 

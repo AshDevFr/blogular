@@ -5,6 +5,8 @@ web:
   volumes:
    - ./src:/home/workspace/src
    - ./server:/home/workspace/server
+   - ./gulp:/home/workspace/gulp
+   - ./gulpfile.js:/home/workspace/gulpfile.js
   ports:
    - "3000:3000"
    - "3010:3010"
