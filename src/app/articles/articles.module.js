@@ -2,5 +2,5 @@
   'use strict';
 
   angular
-    .module('blogularApp-articles', []);
+    .module('blogularApp-articles', ['blogularApp-articles-newArticle']);
 })();
