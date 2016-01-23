@@ -1,0 +1,29 @@
+<div class="row article">
+   <div class="col-sm-4">
+      <a href="#" class="">
+         <img
+               ng-src="{{article.pictureUrl | picture}}"
+               class="img-responsive">
+      </a>
+      <div class="actionBar text-right">
+         <div class="btn-group" role="group">
+            <a href="#/articles/edit/{{article.id}}" class="btn btn-default" title="Edit">
+               <i class="fa fa-pencil-square-o"></i>
+            </a>
+            <button class="btn btn-default" title="Delete"
+                    ng-click="deleteArticle()">
+               <i class="fa fa-trash"></i>
+            </button>
+         </div>
+      </div>
+   </div>
+   <div class="col-sm-8">
+      <h3 class="title">{{article.title | uppercase}}</h3>
+      <p>{{article.content}}</p>
+
+      <p class="text-muted">
+         <span ng-show="article.author">Presented by <a href="#">{{article.author}}</a></span><br>
+         Date <a href="#">{{article.published | date}}</a>
+      </p>
+   </div>
+</div>
