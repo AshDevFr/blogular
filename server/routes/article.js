@@ -82,7 +82,8 @@ var articles = [
     published  : '2016-01-22T04:00:00.000Z',
     author     : 'Chris Mills',
     categories : [
-      'Technology'
+      'Technology',
+      'News'
     ],
     pictureUrl : 'assets/images/ougubgemuqs6g6cjnfom.jpg',
     content    : 'The morning and I have a hate-hate relationship that has seen more than one alarm clock shatter against an unyielding wall, so I don’t really know why a Microsoft developer would feel the need to code an alarm app that forces you to play unnecessarily ‘quirky’ and ‘fun’ games to turn it off. Mimicker is a free download on the Play Store, and it’s not exactly a complicated concept: set your alarm, ...'
@@ -93,7 +94,9 @@ var articles = [
     published  : '2016-01-21T17:35:00.000Z',
     author     : 'Casey Chan on Sploid, shared by Casey Chan to Gizmodo',
     categories : [
-      'Technology'
+      'Technology',
+      'Social',
+      'Media'
     ],
     pictureUrl : 'assets/images/uv3aklryrp5ccgguekyw.gif',
     content    : 'This ain’t no regular car model car because this speed model car can hit speeds of up to 204mph on the track. Watch it build up to that speed and just zip around and around until it starts smoking and becomes a total whir.SPLOID is delicious brain candy. Follow us on Facebook, Twitter and YouTube....'
@@ -115,7 +118,8 @@ var articles = [
     published  : '2016-01-21T22:38:23.000Z',
     author     : 'Casey Chan on Sploid, shared by Casey Chan to Gizmodo',
     categories : [
-      'Technology'
+      'Technology',
+      'News'
     ],
     pictureUrl : 'assets/images/tj6hb8iagkhvz7awwbpz.gif',
     content    : 'There are 175 steps in this Rube Goldberg Machine made by berlagawesome and they’re all layered right after each other and on top of each other and basically all over each other that it’s so chaotic that you don’t always know what’s going on and where to follow. But then somehow, the ball manages to finagle its way into where it needs to go and the machine continues its onward journey towards deli...'
@@ -126,7 +130,8 @@ var articles = [
     published  : '2016-01-22T02:00:00.000Z',
     author     : 'Mika McKinnon',
     categories : [
-      'Technology'
+      'Technology',
+      'News'
     ],
     pictureUrl : 'assets/images/f6xsn5mbl9mmi0gyfah9.jpg',
     content    : 'We’ve seen the International Space Station transit in front of the Sun and the Moon, but passing in front of Saturn is something entirely different. Nice shot!The relative sizes and distances involved are particularly neat for this composite photo of the transit. Saturn is over a million times larger than the space station, but over three million times as far away. The resulting perspective puts t...'
@@ -148,7 +153,8 @@ var articles = [
     published  : '2016-01-21T23:51:23.000Z',
     author     : 'Casey Chan on Sploid, shared by Cheryl Eddy to Gizmodo',
     categories : [
-      'Technology'
+      'Technology',
+      'Media'
     ],
     pictureUrl : 'assets/images/cma8btfgpqrdxo96kkpn.gif',
     content    : 'The tanker in the video is 67-feet long with a 10-foot diameter and can hold up to 30,000 gallons of liquid. It’s made of thick steel and weighs 67,000 pounds and yet it can be crushed with just the sweet simple science of air pressure. Watch as the gang at Mythbusters made the giant tanker implode in glorious slow motion. It just gets obliterated like it’s barely a soda can.All that’s really need...'
@@ -159,7 +165,9 @@ var articles = [
     published  : '2016-01-22T00:20:00.000Z',
     author     : 'Mika McKinnon',
     categories : [
-      'Technology'
+      'Technology',
+      'News',
+      'Media'
     ],
     pictureUrl : 'assets/images/gqba2ofjylmitowpzhtz.jpg',
     content    : 'Go go Dragon! SpaceX just posted video of its Dragon 2 spacecraft testing its ability to hover. Once certified, this spacecraft will carry astronauts to the space station as part of NASA’s commercial crew program. Crewed test flights are tentatively planned to start in 2017.The Dragon 2 (or Crew Dragon) is the spacecraft that will sit atop the Falcon 9 rockets. Although it’ll be launched into orbi...'
@@ -181,7 +189,8 @@ var articles = [
     published  : '2016-01-21T23:20:00.000Z',
     author     : 'Matt Novak on Paleofuture, shared by Cheryl Eddy to Gizmodo',
     categories : [
-      'Technology'
+      'Technology',
+      'News'
     ],
     pictureUrl : 'assets/images/t4rgbd2nfnlqdgxrfbtx.jpg',
     content    : 'Did you see the Hyperloop news out of Davos? You could be zipping around in a real-life Hyperloop by 2018! It’s 2016 now, so that makes it... just two years away! Where have we heard that before?When it comes to high-tech projects, they always seem to be just two years away. Whether it’s flying cars, or vacations on the moon, or robot servants, people on the business end of ambitious projects alwa...'
@@ -203,7 +212,8 @@ var articles = [
     published  : '2016-01-22T14:19:00.000Z',
     author     : 'Daniel Cooper',
     categories : [
-      'Technology'
+      'Technology',
+      'News'
     ],
     webfeeds   : {
       logo          : 'http://storage.googleapis.com/test-site-assets/vSbjObuspiUUUlHx496XW_WaRBw2NaRdTW1NAiwoLAs_ologo-14f041fdbc0',
@@ -235,7 +245,8 @@ var articles = [
     published  : '2016-01-22T13:31:00.000Z',
     author     : 'Steve Dent',
     categories : [
-      'Technology'
+      'Technology',
+      'Media'
     ],
     webfeeds   : {
       logo          : 'http://storage.googleapis.com/test-site-assets/vSbjObuspiUUUlHx496XW_WaRBw2NaRdTW1NAiwoLAs_ologo-14f041fdbc0',
@@ -267,7 +278,8 @@ var articles = [
     published  : '2016-01-22T10:52:00.000Z',
     author     : 'Timothy J. Seppala',
     categories : [
-      'Technology'
+      'Technology',
+      'News'
     ],
     webfeeds   : {
       logo          : 'http://storage.googleapis.com/test-site-assets/vSbjObuspiUUUlHx496XW_WaRBw2NaRdTW1NAiwoLAs_ologo-14f041fdbc0',
@@ -509,7 +521,8 @@ var articles = [
     published  : '2016-01-21T21:55:00.000Z',
     author     : 'Nicole Lee',
     categories : [
-      'Technology'
+      'Technology',
+      'Social'
     ],
     webfeeds   : {
       logo          : 'http://storage.googleapis.com/test-site-assets/vSbjObuspiUUUlHx496XW_WaRBw2NaRdTW1NAiwoLAs_ologo-14f041fdbc0',
