@@ -90,9 +90,13 @@
       }
     ];
 
-    $rootScope.$on('newArticle', function(event, article) {
-      console.log('Event received: newArticle', article);
-      vm.articles.push(article);
-    })
+    activate();
+
+    function activate() {
+      $rootScope.$on('newArticle', function(event, article) {
+        console.log('Event received: newArticle', article);
+        vm.articles.push(article);
+      });
+    }
   }
 })();
