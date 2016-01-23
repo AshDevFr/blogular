@@ -17,15 +17,11 @@
     activate();
 
     function activate() {
-      Articles.fetchOne($routeParams.id).then(function(response) {
-        vm.article = response.data;
-      }, function(err) {
-        console.log('Something wrong happened', err);
-      });
+      vm.article = Articles.get({id : $routeParams.id});
     }
 
     function updateArticle() {
-      Articles.update(vm.article).then(function() {
+      vm.article.$update(function() {
         $location.path('/articles');
       }, function(err) {
         console.log('Something wrong happened', err);

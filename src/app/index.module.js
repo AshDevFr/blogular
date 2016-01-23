@@ -8,6 +8,7 @@
       'blogularApp-articles',
       'blogularApp-editArticle',
       'ngRoute',
-      'ngMessages'
+      'ngMessages',
+      'ngResource'
     ]);
 })();

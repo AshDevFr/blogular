@@ -17,16 +17,12 @@
     activate();
 
     function activate() {
-      Articles.fetch().then(function(response) {
-        vm.articles = response.data;
-      }, function(err) {
-        console.log('Something wrong happened', err);
-      });
+      vm.articles = Articles.query();
 
       $rootScope.$on('newArticle', function(event, article) {
         console.log('Event received: newArticle', article);
-        Articles.create(article).then(function(response) {
-          vm.articles.push(response.data);
+        Articles.save(article, function(response) {
+          vm.articles.push(response);
         }, function(err) {
           console.log('Something wrong happened', err);
         });
@@ -34,7 +30,7 @@
     }
 
     function deleteArticle(index) {
-      Articles.remove(vm.articles[index]).then(function() {
+      vm.articles[index].$remove(function() {
         vm.articles.splice(index, 1);
       });
     }
