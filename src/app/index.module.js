@@ -2,5 +2,9 @@
   'use strict';
 
   angular
-    .module('blogularApp', ['blogularApp-home', 'blogularApp-articles', 'ngRoute']);
+    .module('blogularApp', [
+      'blogularApp-home',
+      'blogularApp-articles',
+      'ngRoute'
+    ]);
 })();

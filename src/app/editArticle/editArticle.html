@@ -1,0 +1,30 @@
+<h3>Article Edition</h3>
+
+<form>
+   <div class="form-group">
+      <label for="inputTitle">Title</label>
+      <input type="text" class="form-control" id="inputTitle" placeholder="Title" ng-model="EditArticleCtrl.article.title">
+   </div>
+   <div class="form-group">
+      <label for="inputcontent">Content</label>
+      <textarea type="text" class="form-control" id="inputcontent" placeholder="Content" ng-model="EditArticleCtrl.article.content"></textarea>
+   </div>
+   <div class="form-group">
+      <label for="inputAuthor">Author</label>
+      <input type="text" class="form-control" id="inputAuthor" placeholder="Author" ng-model="EditArticleCtrl.article.author">
+   </div>
+   <div class="form-group">
+      <label for="inputCategory">Categories</label>
+      <select id="inputCategory" multiple class="form-control" ng-model="EditArticleCtrl.article.categories">
+         <option>Technology</option>
+         <option>Social</option>
+         <option>Media</option>
+         <option>News</option>
+      </select>
+   </div>
+</form>
+
+<div class="text-right">
+<a href="#/articles" type="button" class="btn btn-default">Cancel</a>
+<button type="button" class="btn btn-primary">Save</button>
+</div>

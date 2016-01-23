@@ -7,10 +7,15 @@
                   class="img-responsive">
          </a>
          <div class="actionBar text-right">
-            <button class="btn btn-default" title="Delete"
-                    ng-click="ArticlesCtrl.deleteArticle($index)">
-               <i class="fa fa-trash"></i>
-            </button>
+            <div class="btn-group" role="group">
+               <button class="btn btn-default" title="Edit">
+                  <i class="fa fa-pencil-square-o"></i>
+               </button>
+               <button class="btn btn-default" title="Delete"
+                       ng-click="ArticlesCtrl.deleteArticle($index)">
+                  <i class="fa fa-trash"></i>
+               </button>
+            </div>
          </div>
       </div>
       <div class="col-sm-8">
