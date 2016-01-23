@@ -6,6 +6,7 @@
       'blogularApp-home',
       'blogularApp-articles',
       'blogularApp-editArticle',
-      'ngRoute'
+      'ngRoute',
+      'ngMessages'
     ]);
 })();

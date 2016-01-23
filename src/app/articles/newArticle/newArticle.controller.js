@@ -14,13 +14,16 @@
 
     vm.addArticle = addArticle;
 
-    function addArticle() {
+    function addArticle(articleForm) {
       var date = new Date();
 
       vm.newArticle.published = date;
       console.log('Emit event: newArticle');
       $rootScope.$emit('newArticle', vm.newArticle);
-      vm.newArticle = {};
+      setTimeout(function() {
+        vm.newArticle = {};
+        articleForm.$setPristine();
+      });
     }
   }
 })();

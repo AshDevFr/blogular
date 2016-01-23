@@ -7,34 +7,65 @@
             <h4 class="modal-title" id="newArticleModalLabel">Create a new article</h4>
          </div>
          <div class="modal-body">
-            <form>
-               <div class="form-group">
+            <form name="articleForm" novalidate>
+               <div class="form-group" ng-class="{'has-error': articleForm.$dirty && articleForm.title.$invalid}">
                   <label for="inputTitle">Title</label>
-                  <input type="text" class="form-control" id="inputTitle" placeholder="Title" ng-model="NewArticleCtrl.newArticle.title">
+                  <input type="text" class="form-control" id="inputTitle" placeholder="Title"
+                         name="title"
+                         ng-model="NewArticleCtrl.newArticle.title"
+                         required>
+                  <div ng-messages="articleForm.$dirty && articleForm.title.$error">
+                     <div ng-messages-include="errorMessages.html"></div>
+                  </div>
                </div>
-               <div class="form-group">
+               <div class="form-group" ng-class="{'has-error': articleForm.$dirty && articleForm.content.$invalid}">
                   <label for="inputcontent">Content</label>
-                  <textarea type="text" class="form-control" id="inputcontent" placeholder="Content" ng-model="NewArticleCtrl.newArticle.content"></textarea>
+                  <textarea type="text" class="form-control" id="inputcontent" placeholder="Content"
+                            name="content"
+                            ng-model="NewArticleCtrl.newArticle.content"
+                            required
+                            ng-minlength="10"
+                            ng-maxlength="300"></textarea>
+                  <div ng-messages="articleForm.$dirty && articleForm.content.$error">
+                     <div ng-messages-include="errorMessages.html"></div>
+                  </div>
                </div>
                <div class="form-group">
                   <label for="inputAuthor">Author</label>
-                  <input type="text" class="form-control" id="inputAuthor" placeholder="Author" ng-model="NewArticleCtrl.newArticle.author">
+                  <input type="text" class="form-control" id="inputAuthor" placeholder="Author"
+                         name="author"
+                         ng-model="NewArticleCtrl.newArticle.author">
                </div>
-               <div class="form-group">
+               <div class="form-group" ng-class="{'has-error': articleForm.$dirty && articleForm.categories.$invalid}">
                   <label for="inputCategory">Categories</label>
-                  <select id="inputCategory" multiple class="form-control" ng-model="NewArticleCtrl.newArticle.categories">
+                  <select id="inputCategory" multiple class="form-control"
+                          name="categories"
+                          ng-model="NewArticleCtrl.newArticle.categories"
+                          required>
                      <option>Technology</option>
                      <option>Social</option>
                      <option>Media</option>
                      <option>News</option>
                   </select>
+                  <div ng-messages="articleForm.$dirty && articleForm.categories.$error">
+                     <div ng-messages-include="errorMessages.html"></div>
+                  </div>
                </div>
             </form>
          </div>
          <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="NewArticleCtrl.addArticle()">Save</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal"
+                    ng-disabled="articleForm.$invalid"
+                    ng-click="NewArticleCtrl.addArticle(articleForm)">Save
+            </button>
          </div>
       </div>
    </div>
 </div>
+
+<script type="text/ng-template" id="errorMessages.html">
+   <div ng-message="required">Required field</div>
+   <div ng-message="minlength">Too short</div>
+   <div ng-message="maxlength">Too long</div>
+</script>
