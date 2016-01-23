@@ -12,6 +12,8 @@
 
     vm.articles = [];
 
+    vm.deleteArticle = deleteArticle;
+
     activate();
 
     function activate() {
@@ -28,6 +30,12 @@
         }, function(err) {
           console.log('Something wrong happened', err);
         });
+      });
+    }
+
+    function deleteArticle(index) {
+      $http.delete('/api/articles/' + vm.articles[index].id).then(function() {
+        vm.articles.splice(index, 1);
       });
     }
   }

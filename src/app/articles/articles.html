@@ -7,7 +7,10 @@
                   class="img-responsive">
          </a>
          <div class="actionBar text-right">
-            <button class="btn btn-default" title="Delete"><i class="fa fa-trash"></i></button>
+            <button class="btn btn-default" title="Delete"
+                    ng-click="ArticlesCtrl.deleteArticle($index)">
+               <i class="fa fa-trash"></i>
+            </button>
          </div>
       </div>
       <div class="col-sm-8">
@@ -31,4 +34,5 @@
    <hr>
 </div>
 
-<ng-include src="'app/articles/newArticle/newArticle.html'" ng-controller="NewArticleController as NewArticleCtrl"></ng-include>
+<ng-include src="'app/articles/newArticle/newArticle.html'"
+            ng-controller="NewArticleController as NewArticleCtrl"></ng-include>
