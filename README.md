@@ -2,6 +2,29 @@
 
 Blogular is a simple set of exercises to learn how to develop a web application using AngularJS
 
+## Run the project
+
+### With Docker
+
+```$ docker-compose up```
+
+
+### Without Docker 
+
+#### Prerequisite
+
+```
+$ npm i -g gulp bower nodemon
+$ npm i
+$ bower install
+```
+
+
+#### Commands
+
+* Run the app: **npm start**
+
+
 ## Steps 
 
 ### Step 1 - Databinding
@@ -61,8 +84,8 @@ Blogular is a simple set of exercises to learn how to develop a web application 
 ### Step 10 - Router 
 
 * Use ngRoute to define your routes 
-  * / for the home (and by default)
-  * /articles for the list of articles
+  * **/** for the home (and by default)
+  * **/articles** for the list of articles
 
 
 ### Step 11 - Delete an article
