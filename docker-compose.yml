@@ -2,6 +2,8 @@ web:
   build: .
   dockerfile: Dockerfile_dev
   command: gulp serve
+  environment:
+  - POLL=true
   volumes:
    - ./src:/home/workspace/src
    - ./server:/home/workspace/server
