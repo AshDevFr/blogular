@@ -22,20 +22,12 @@ $fa-font-path: "../../bower_components/font-awesome/fonts";
 // endinjector
 .navbar {
   .navbar-brand {
-    > svg {
-      margin-top: -15px;
+    > img {
+      margin-top: -10px;
       margin-right: 20px;
-      height: 50px;
+      margin-left: 10px;
       width: 80px;
     }
-  }
-}
-
-.bearjs__path_hover {
-  transition: all 0.8s;
-  &:hover {
-    fill: #b2b2b2 !important;
-    transition: all 0.2s;
   }
 }
 
