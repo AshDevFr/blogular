@@ -153,3 +153,11 @@ $ bower install
 ### Step 21 - Create a directive
 
 * Create a custom directive to display articles in the list
+
+
+
+## Credits
+
+Training created by [Sylvain CAU](https://github.com/AshDevFr)
+
+Follow me on Twitter [@SylvainCau](https://twitter.com/SylvainCau)
