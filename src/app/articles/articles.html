@@ -48,7 +48,8 @@
 
                <p class="text-muted">
                   <span ng-show="article.author">Presented by <a href="#">{{article.author}}</a></span><br>
-                  Date <a href="#">{{article.published | date}}</a>
+                  Date <a href="#">{{article.published | date}}</a><br>
+                  <span ng-show="article.categories">{{article.categories | categories}}</span>
                </p>
             </div>
          </div>
