@@ -25,6 +25,7 @@ $ bower install
 * Run the app: **npm start**
 
 
+
 ## Steps 
 
 ### Step 1 - Databinding
@@ -153,6 +154,105 @@ $ bower install
 ### Step 21 - Create a directive
 
 * Create a custom directive to display articles in the list
+
+
+
+## TODO
+
+### Step 0 - Gulp
+
+* Setup a gulp task to serve an application
+
+
+### Step 22 - Provider
+
+* Transform the service into a provider and create a method to set the api URL
+
+
+### Step 23 - UI-Router
+
+* Replace ngRouter by ui-router
+* Setup a view header and put the navbar inside it
+* Use ui-router event to to display a loading animation
+
+
+### Step 24 - Optimization
+
+* Use optimization mechanisms to reduce the amount of watchers
+
+
+### Step 25 - Filters
+
+* Use filters in controllers instead of views
+
+
+### Step 26 - Promises
+
+* Add a new route to display an article
+* In the resolve, chain promises to get all informations from an article 
+
+* GET: **/api/articles/:id** to get the title, author, categories and date
+* GET: **/api/articles/:id/content** to get the content
+* GET: **/api/articles/:id/picture** to get the picture url
+
+
+### Step 27 - Create a directive with transclude
+
+* Create a directive to display the list of categories
+* Use transclusion to give the template
+
+
+### Step 28 - Form element
+
+* Transform your directive to use it as a form element
+* Create a sync validator to check the author name (should have a firstname and a lastname)
+* Create an async validator to check (for new articles) if the title is already used
+
+
+### Step 29 - Translation
+
+* Use angular-translate to display the site in two language (json files provided)
+* Allow to change the language by clicking on the flag in the navbar
+
+
+### Step 30 - REST
+
+* The API is in the wrong format, use transformers to make the application works
+
+
+### Step 31 - Interceptors
+
+* When getting a 401 http error, display the login modal
+
+
+### Step 32 - CSRF
+
+* The server ask for a csrf, change headers to make the form work
+
+
+### Step 33 - Unit test: Controller
+
+* Create a unit test for the ArticleController
+
+
+### Step 34 - Unit test: Directive
+
+* Create a unit test for both validators
+
+
+### Step 35 - Unit test: Filter
+
+* Create a unit test for the picture filter
+
+
+### Step 36 - Unit test: Service
+
+* Create a unit test for the Article service
+
+
+### Step 37 - E2E test
+
+* Create an e2e test for the Articles page
 
 
 
