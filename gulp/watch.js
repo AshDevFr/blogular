@@ -41,7 +41,7 @@ gulp.task('watch', ['inject'], function() {
     },
     function(file) {
       if (isOnlyChange(file.event)) {
-        gulp.start('styles-reload');
+        gulp.start('scripts-reload');
       } else {
         gulp.start('inject-reload');
       }
