@@ -27,7 +27,9 @@ function browserSyncInit(baseDir, browser) {
     routes  : routes
   };
 
-  server.middleware = proxyMiddleware('/api', {target : 'http://localhost:3010/', proxyHost : 'localhost:3010/'});
+  server.middleware = proxyMiddleware('/api', {
+    target : 'http://localhost:3010/'
+  });
 
   browserSync.instance = browserSync.init({
     startPath : '/',
