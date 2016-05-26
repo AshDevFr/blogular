@@ -70,7 +70,7 @@ $ bower install
 ### Step 8 - Event
 
 * Add the new article in the list of articles
-* Use eventq to add the new article
+* Use event to add the new article
 
 
 ### Step 9 - http 
