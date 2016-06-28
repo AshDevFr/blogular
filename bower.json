@@ -2,35 +2,35 @@
   "name": "blogular",
   "version": "0.0.0",
   "dependencies": {
-    "angular-messages": "~1.4.2",
-    "angular-resource": "~1.4.2",
-    "angular-route": "~1.4.2",
-    "bootstrap-sass": "~3.3.5",
+    "angular-messages": "~1.5.3",
+    "angular-resource": "~1.5.3",
+    "angular-route": "~1.5.3",
+    "bootstrap": "~3.3.5",
     "moment": "~2.10.6",
     "animate.css": "~3.4.0",
-    "angular": "~1.4.2",
+    "angular": "~1.5.3",
     "font-awesome": "~4.5.0"
   },
   "overrides": {
-    "bootstrap-sass": {
+    "bootstrap": {
       "main": [
-        "assets/javascripts/bootstrap.js",
-        "assets/stylesheets/_bootstrap.scss",
-        "assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
-        "assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
-        "assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
-        "assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
-        "assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
+        "less/bootstrap.less",
+        "dist/js/bootstrap.js",
+        "dist/fonts/glyphicons-halflings-regular.eot",
+        "dist/fonts/glyphicons-halflings-regular.svg",
+        "dist/fonts/glyphicons-halflings-regular.ttf",
+        "dist/fonts/glyphicons-halflings-regular.woff",
+        "dist/fonts/glyphicons-halflings-regular.woff2"
       ]
     },
     "font-awesome": {
       "main": [
-        "scss/font-awesome.scss",
+        "less/font-awesome.less",
         "fonts/*"
       ]
     }
   },
   "resolutions": {
-    "angular": "~1.4.2"
+    "angular": "~1.5.3"
   }
 }
