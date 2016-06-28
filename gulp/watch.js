@@ -1,9 +1,9 @@
 'use strict';
 
-var path  = require('path');
-var gulp  = require('gulp');
+var path = require('path');
+var gulp = require('gulp');
 var watch = require('gulp-watch');
-var conf  = require('./conf');
+var conf = require('./conf');
 
 var browserSync = require('browser-sync');
 
@@ -11,7 +11,7 @@ function isOnlyChange(event) {
   return event.type === 'change';
 }
 
-gulp.task('watch', ['inject'], function() {
+gulp.task('watch', ['inject'], function () {
   watch([path.join(conf.paths.src, '/*.html'), 'bower.json'],
     {
       usePolling : process.env.POLL || false
@@ -21,19 +21,19 @@ gulp.task('watch', ['inject'], function() {
     });
 
   watch([
-      path.join(conf.paths.src, '/app/**/*.css'),
-      path.join(conf.paths.src, '/app/**/*.scss')
+    path.join(conf.paths.src, '/app/**/*.css'),
+      path.join(conf.paths.src, '/app/**/*.less')
     ],
     {
       usePolling : process.env.POLL || false
     },
     function(file) {
       if (isOnlyChange(file.event)) {
-        gulp.start('styles-reload');
-      } else {
-        gulp.start('inject-reload');
-      }
-    });
+      gulp.start('styles-reload');
+    } else {
+      gulp.start('inject-reload');
+    }
+  });
 
   watch(path.join(conf.paths.src, '/app/**/*.js'),
     {
@@ -41,11 +41,11 @@ gulp.task('watch', ['inject'], function() {
     },
     function(file) {
       if (isOnlyChange(file.event)) {
-        gulp.start('scripts-reload');
-      } else {
-        gulp.start('inject-reload');
-      }
-    });
+      gulp.start('scripts-reload');
+    } else {
+      gulp.start('inject-reload');
+    }
+  });
 
   watch(path.join(conf.paths.src, '/app/**/*.html'),
     {
@@ -53,5 +53,5 @@ gulp.task('watch', ['inject'], function() {
     },
     function(file) {
       browserSync.reload(file.path);
-    });
+  });
 });
